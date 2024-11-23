@@ -18,7 +18,7 @@ export const BlogCard = ({
     return <Link to={`/blog/${id}`}>
         <div className=" p-4 border-b border-slate-200 pb-4 w-screen max-w-screen-md cursor-pointer">
             <div className="flex">
-                <Avatar name={authorName} />
+                <Avatar name={authorName} size={"small"} />
                 <div className="font-extralight pl-2 text-sm flex justify-center flex-col">{authorName}</div>
                 <div className="font-thin pl-2 text-slate-500 text-sm flex justify-center flex-col">{publishedDate}</div>
             </div>
