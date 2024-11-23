@@ -22,33 +22,39 @@ Connects to the backend for CRUD operations related to blogs and authentication.
 Shared code between the frontend and backend, including the Zod validation schemas.
 The validation schemas ensure the data consistency across the client and server.
 Pages
+
 1. Sign Up
 Users can create a new account.
 
-image
+![image](https://github.com/user-attachments/assets/60245666-15a1-4ce7-8909-87b2758adb0b)
+
 
 
 2. Sign In
 Users can log in to their account using JWT-based authentication.
 
-image
+![image](https://github.com/user-attachments/assets/8b70b8b6-f9ab-469a-94cc-c7ec14320f99)
+
 
 3. Blogs Page
 Displays a list of all published blogs.
 
 Each blog is identified by a unique UUID.
 
-image
+![image](https://github.com/user-attachments/assets/60e2a907-55bb-483a-a2ab-d19fe1242041)
+
 
 4. Publish Page
 Authenticated users can create and publish new blogs.
 
-image
+![image](https://github.com/user-attachments/assets/4583b6b5-d2a0-443f-9e5e-b2171dfaa0b5)
+
 
 5. Blog Detail Page
 Displays the full content of a specific blog post.
 
-image
+![image](https://github.com/user-attachments/assets/db659545-efde-4610-b23d-488182119b7d)
+
 
 Technologies Used
 Frontend: React, TypeScript
