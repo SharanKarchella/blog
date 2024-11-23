@@ -25,7 +25,7 @@ Pages
 1. Sign Up
 Users can create a new account.
 
-![image](https://github.com/user-attachments/assets/d6c26efc-7d51-4eb9-af29-f22cdc292132)
+image
 
 
 2. Sign In
