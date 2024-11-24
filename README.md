@@ -1,50 +1,68 @@
-# React + TypeScript + Vite
+This is a clone of Medium, a blogging platform, built using modern web technologies such as React, Hono, JSON Web Token (JWT), Cloudflare Workers, Serverless backend, and TypeScript. The project allows users to sign up, log in, write, publish, and read blogs. The application is designed to be scalable and fast, leveraging serverless architecture.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Features
+Authentication: Users can sign up and log in using JWT-based authentication.
+Publish Blogs: Authenticated users can publish their blogs.
+Read Blogs: Anyone can browse and read published blogs.
+Blog Details: Each blog is assigned a unique UUID for easy reference.
+Serverless Architecture: The backend is serverless, built using Cloudflare Workers for efficient and scalable deployment.
+Custom NPM Library: A custom NPM library for shared validation logic using Zod.
+Project Structure
+The repository is divided into three main folders:
 
-Currently, two official plugins are available:
+1. Backend
+Contains the server-side code that handles blog fetching, user authentication, blog publishing, PostgreSQL,Prisma ORM and other backend logic.
+Powered by Hono, a fast and lightweight web framework for Cloudflare Workers.
+Uses JWT for secure authentication.
+2. Frontend
+Built using React for dynamic rendering and responsive user interfaces.
+Provides pages for reading blogs, publishing blogs, signing in, and signing up.
+Connects to the backend for CRUD operations related to blogs and authentication.
+3. Common
+Shared code between the frontend and backend, including the Zod validation schemas.
+The validation schemas ensure the data consistency across the client and server.
+Pages
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Sign Up
+Users can create a new account.
 
-## Expanding the ESLint configuration
+![image](https://github.com/user-attachments/assets/60245666-15a1-4ce7-8909-87b2758adb0b)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+2. Sign In
+Users can log in to their account using JWT-based authentication.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+![image](https://github.com/user-attachments/assets/8b70b8b6-f9ab-469a-94cc-c7ec14320f99)
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+3. Blogs Page
+Displays a list of all published blogs.
+
+Each blog is identified by a unique UUID.
+
+![image](https://github.com/user-attachments/assets/60e2a907-55bb-483a-a2ab-d19fe1242041)
+
+
+4. Publish Page
+Authenticated users can create and publish new blogs.
+
+![image](https://github.com/user-attachments/assets/4583b6b5-d2a0-443f-9e5e-b2171dfaa0b5)
+
+
+5. Blog Detail Page
+Displays the full content of a specific blog post.
+
+![image](https://github.com/user-attachments/assets/db659545-efde-4610-b23d-488182119b7d)
+
+
+Technologies Used
+Frontend: React, TypeScript
+Backend: Hono (for Cloudflare Workers), TypeScript, JSON Web Tokens (JWT)
+Serverless: Cloudflare Workers
+Database: PostgreSQL
+ORM: Prisma ORM
+Validation: Zod (used in both frontend and backend)
+Custom NPM Library: Created for Zod validation logic
+NPM Package
+The project includes a custom NPM package that contains Zod validation logic shared between the frontend and backend. This ensures that both sides of the application enforce the same validation rules, reducing duplication and maintaining consistency.
