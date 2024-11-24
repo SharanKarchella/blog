@@ -23,7 +23,7 @@ export const Auth = ({ type }: { type: "signup" | "signin" }) => {
             navigate("/blogs");
         } catch (e) {
             //alert the user here 
-            alert("Error while signing up")
+            alert("Error while signing up - Username: Your-Name@gmail.com, Password: Should contain atleast 6 characters")
         }
     }
     return <div className="h-screen flex justify-center flex-col ">
