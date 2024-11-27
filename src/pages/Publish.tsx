@@ -24,8 +24,8 @@ export const Publish = () => {
             setTitleError("");
         }
 
-        if (description.length < 100) {
-            setDescriptionError("Description must be at least 100 characters long.");
+        if (description.length < 10) {
+            setDescriptionError("Description must be at least 10 characters long.");
             hasError = true;
         } else {
             setDescriptionError("");
